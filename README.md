@@ -1,12 +1,13 @@
 # Flutter better-grid-view
 
 An implementation of a grid layout system with Flutter.
+
+![grid layout](assets/grid_layout.gif)
+
 ## What is better-grid-view?
 better-grid-view is a design system that allows for the creation of customizable grid layouts. The grid is composed of blocks that can be created/deleted/moved around as requried to form a desired layout.
 
 better-grid-view works by converting data in a matrix stored along with a dictionary of each blocks corresponding content, on the layout server into a JSON string object which is then used to create the Grid layout on the server side. The matrix determines how many rows and columns the grid has and the size of each block. Empty spaces with no block are labelled with a '0' and a block will instead have a numerical ID, 1, 2, 3, etc, and it is this ID that is used to store the block's content data.
-
-![grid layout](assets/grid_layout.gif)
 
 
 **Example 1**: The diagram below is a 3x3 matrix with no combined block.
