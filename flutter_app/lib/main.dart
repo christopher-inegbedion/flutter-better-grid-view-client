@@ -52,7 +52,7 @@ class _MyAppState extends State<MyApp> {
     return TextButton(
       child: Text(
         text,
-        style: TextStyle(color: devToolsBtnColor),
+        style: TextStyle(color: Colors.black),
       ),
       onPressed: () {
         action();

@@ -34,7 +34,9 @@ class GridUIView extends StatefulWidget {
   _GridUIViewState state;
 
   GridUIView(this.gridJson, this.columns, this.rows, this.gridBackgroundData,
-      this.data, {Key key}) : super(key: key);
+      this.data,
+      {Key key})
+      : super(key: key);
 
   GridUIView.empty({Key key}) : super(key: key) {
     gridJson = null;
@@ -2191,8 +2193,7 @@ class _GridUIViewState extends State<GridUIView> {
                 dragSelectGridController.value.selectedIndexes;
             if (!startDrag) {
               startDrag = true;
-              startGridColumn =
-                  (selectedIndices.elementAt(0) / rows).floor();
+              startGridColumn = (selectedIndices.elementAt(0) / rows).floor();
               startGridRow = selectedIndices.elementAt(0) % rows;
             }
           }
@@ -2341,6 +2342,7 @@ class _GridUIViewState extends State<GridUIView> {
     blockSize = getBlockSize(rows);
 
     return Container(
+      color: Colors.black,
       height: columns == 0
           ? MediaQuery.of(context).size.height
           : columns * blockSize,
